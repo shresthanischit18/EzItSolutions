@@ -41,7 +41,7 @@ const HorizontalCardProduct = ({ category, heading }) => {
 
   return (
     <div className="container mx-auto px-4 my-6 relative">
-      <h2 className="text-[30px] text-center font-semibold py-4">{heading}</h2>
+      <h2 className="text-[20px] lg:text-[30px] text-center font-semibold py-4">{heading}</h2>
 
       <div
         className="flex items-center gap-4 md:gap-6 overflow-scroll scrollbar-none transition-all"
@@ -82,7 +82,7 @@ const HorizontalCardProduct = ({ category, heading }) => {
               <Link
                 key={product?._id}
                 to={"product/" + product?._id}
-                className="w-full min-w-[280px] md:min-w-[320px] max-w-[310px] md:max-w-[350px] h-36 bg-white rounded-sm shadow flex"
+                className="w-full min-w-[310px] md:min-w-[320px] max-w-[310px] md:max-w-[350px] h-36 bg-white rounded-sm shadow flex"
               >
                 <div className="bg-slate-200 h-full p-4 min-w-[120px] md:min-w-[145px]">
                   <img
@@ -110,7 +110,8 @@ const HorizontalCardProduct = ({ category, heading }) => {
                     className="text-sm bg-[#0068c8] hover:scale-105 text-white px-3 py-0.5 rounded-full flex gap-5 mt-1"
                     onClick={(e) => handleAddToCart(e, product?._id)}
                   >
-                    <FaCartPlus className="mt-1"/>Add to Cart
+                    <FaCartPlus className="mt-1" />
+                    Add to Cart
                   </button>
                 </div>
               </Link>
